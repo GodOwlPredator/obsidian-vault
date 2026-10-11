@@ -1,0 +1,28 @@
+{
+  "types": {
+    "cssclasses": "multitext",
+    "tags": "tags",
+    "Время": "text",
+    "создал заметку": "text",
+    "energy": "number",
+    "mood": "number",
+    "focus": "number",
+    "log": "text",
+    "status": "text",
+    "type": "text",
+    "name": "text",
+    "title": "text",
+    "date": "date",
+    "date_started": "date",
+    "date_finished": "date",
+    "due": "date",
+    "priority": "number",
+    "duration": "number",
+    "intensity": "number",
+    "rating": "number",
+    "pages": "number",
+    "pages_read": "number",
+    "progress": "number",
+    "credits": "number"
+  }
+}

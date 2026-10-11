@@ -1,0 +1,79 @@
+/* 🎨 Цветные выделители — маркер + рваная бумага.
+   Цвет:      класс mark.hl-* / span.hl-* задаёт --hl-c = r,g,b
+   Плотность: body [--hl-a] (0.05..1) — меняет все выделения сразу
+   Форма:     body.hl-razn / body.hl-round / body.hl-plain — рваная / закруглённая / ровная
+
+   Покрытие букв: базовая заливка прямо на элементе с вертикальным
+   padding (0.13em сверху/снизу) — глифы с выносными элементами (р, у, б)
+   полностью попадают в мазок, как у настоящего маркера. */
+
+/* ─ цвета пресетов (r,g,b) ─────────────────────────────── */
+mark.hl-yellow, span.hl-yellow { --hl-c: 255, 219, 40; }
+mark.hl-green,  span.hl-green  { --hl-c: 132, 229, 116; }
+mark.hl-pink,   span.hl-pink   { --hl-c: 255, 143, 187; }
+mark.hl-blue,   span.hl-blue   { --hl-c: 122, 194, 255; }
+mark.hl-orange, span.hl-orange { --hl-c: 255, 160, 64; }
+mark.hl-purple, span.hl-purple { --hl-c: 196, 158, 255; }
+mark.hl-cyan,   span.hl-cyan   { --hl-c: 126, 231, 255; }
+mark.hl-red,    span.hl-red    { --hl-c: 255, 110, 110; }
+/* кастомный цвет подставляется динамически:
+   mark.hl-custom { --hl-c: R,G,B; }  — из панели */
+
+/* ─ базовая заливка: маркер, покрывающий ВСЕ буквы ─────── */
+mark[class*="hl-"],
+span[class*="hl-"] {
+  background: rgba(var(--hl-c), var(--hl-a, 0.68));
+  color: inherit;
+  padding: 0.13em 0.28em;              /* вертикальный запас для выносных элементов */
+  border-radius: 3px;
+  text-shadow: 0 1px 1px rgba(0, 0, 0, 0.3);
+  box-decoration-break: clone;
+}
+
+/* ─ форма: ровная ─────────────────────────────────────── */
+body.hl-plain mark[class*="hl-"],
+body.hl-plain span[class*="hl-"] {
+  border-radius: 2px;
+}
+
+/* ─ форма: закруглённая — симметричный скруг, без смещения ─ */
+body.hl-round mark[class*="hl-"],
+body.hl-round span[class*="hl-"] {
+  border-radius: 0.6em;
+  padding: 0.15em 0.45em;
+}
+
+/* ─ форма: рваная — смесь маркера и рваной бумаги ─────────
+   Заливка уходит на тень-подложку с рваными зубчатыми краями
+   (top/bottom отрицательные — мазок чуть выше и ниже текста,
+   поэтому буквы не обрезаются). */
+body.hl-razn mark[class*="hl-"],
+body.hl-razn span[class*="hl-"] {
+  position: relative;
+  background: transparent;
+  padding: 0 0.3em;
+}
+body.hl-razn mark[class*="hl-"]::before,
+body.hl-razn span[class*="hl-"]::before {
+  content: "";
+  position: absolute;
+  top: -0.16em; left: -0.12em; right: -0.12em; bottom: -0.16em;
+  z-index: -1;
+  background:
+    linear-gradient(180deg, rgba(255, 255, 255, 0.10) 0%, rgba(255, 255, 255, 0) 40%),
+    rgba(var(--hl-c), var(--hl-a, 0.7));
+  clip-path: polygon(
+    /* верхний рваный край */
+    0 8%, 2.5% 3%, 6% 7%, 9% 2%, 13% 8%, 17% 2%, 21% 7%, 25% 3%, 30% 9%, 34% 2%,
+    39% 8%, 43% 3%, 48% 9%, 52% 2%, 57% 8%, 62% 3%, 67% 9%, 71% 2%, 76% 7%, 80% 3%,
+    85% 8%, 89% 2%, 94% 6%, 97% 3%, 100% 8%,
+    /* правый край с надрывами */
+    100% 28%, 97% 36%, 100% 45%, 98% 54%, 100% 63%, 97% 72%, 100% 82%, 98% 90%, 100% 96%,
+    /* нижний рваный край */
+    96% 96%, 93% 92%, 89% 98%, 85% 93%, 80% 97%, 76% 93%, 71% 98%, 66% 93%, 61% 98%, 56% 93%,
+    51% 98%, 46% 93%, 41% 98%, 36% 93%, 31% 98%, 26% 93%, 21% 98%, 16% 93%, 11% 98%, 7% 94%, 3% 97%, 0 93%,
+    /* левый край с надрывами */
+    3% 90%, 0 82%, 2% 72%, 0 63%, 3% 54%, 0 45%, 2% 36%, 0 28%
+  );
+  filter: drop-shadow(0 1.5px 1.5px rgba(0, 0, 0, 0.28));
+}

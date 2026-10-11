@@ -1,0 +1,49 @@
+/* ══════════════════════════════════════════════════════════
+   🎙️ Voice Notes — Obsidian CSS Snippet
+   Стилизует встроенные аудио (.webm / .mp3) в заметках
+   Цвет акцента: #8f0000
+   ══════════════════════════════════════════════════════════ */
+
+/* Аудио-плеер внутри заметок */
+.markdown-rendered audio,
+.markdown-preview-view audio {
+    display: block;
+    width: 100%;
+    max-width: 480px;
+    height: 38px;
+    border-radius: 10px;
+    outline: none;
+    margin: 6px 0;
+    accent-color: #8f0000;
+    filter: brightness(0.95) saturate(1.1);
+}
+
+/* Обёртка для встроенного аудио */
+.markdown-rendered .internal-embed[src$=".webm"],
+.markdown-rendered .internal-embed[src$=".mp3"],
+.markdown-rendered .internal-embed[src$=".m4a"] {
+    display: block;
+    background: #1a1a1a;
+    border: 1px solid #2e2e2e;
+    border-left: 3px solid #8f0000;
+    border-radius: 10px;
+    padding: 10px 14px;
+    margin: 8px 0;
+}
+
+/* Подпись под аудио */
+.markdown-rendered .internal-embed[src$=".webm"] .file-embed-title,
+.markdown-rendered .internal-embed[src$=".mp3"]  .file-embed-title,
+.markdown-rendered .internal-embed[src$=".m4a"]  .file-embed-title {
+    font-size: 11px;
+    color: #555;
+    margin-bottom: 6px;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.markdown-rendered .internal-embed[src$=".webm"] .file-embed-title::before {
+    content: "🎙️";
+    font-size: 12px;
+}

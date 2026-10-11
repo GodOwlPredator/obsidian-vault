@@ -1,0 +1,13 @@
+{
+  "cssTheme": "Minimal",
+  "baseFontSize": 27,
+  "textFontFamily": "",
+  "accentColor": "#a80000",
+  "baseFontSizeAction": true,
+  "enabledCssSnippets": [
+    "sport-folders",
+    "voice-notes",
+    "task-board",
+    "highlight"
+  ]
+}

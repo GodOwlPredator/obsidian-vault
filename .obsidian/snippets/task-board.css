@@ -1,0 +1,3 @@
+/* Для заметок с cssclasses: [task-board] (📝Задачи, PC Build, Sim Racing) */
+.markdown-preview-view.task-board { overflow-x: hidden !important; }
+.markdown-preview-view.task-board .markdown-preview-section > div { max-width: none !important; }

@@ -1,0 +1,720 @@
+{
+  "main": {
+    "id": "d92cc2cf2d1d210c",
+    "type": "split",
+    "children": [
+      {
+        "id": "9ef4de8978d7659d",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "5dea0305a6047c3e",
+            "type": "leaf",
+            "pinned": true,
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "⚙️ Центр управления.md",
+                "mode": "source",
+                "source": false
+              },
+              "pinned": true,
+              "icon": "lucide-file",
+              "title": "⚙️ Центр управления"
+            }
+          },
+          {
+            "id": "1b8d9991d8bbe878",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Учёба 🎓/Предметы/☄️ Физика.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "☄️ Физика"
+            }
+          },
+          {
+            "id": "d02ae0f4b14cbcc7",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Библиотека 📚/Книги/📝 Отношения между эго и бессознательным.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "📝 Отношения между эго и бессознательным"
+            }
+          }
+        ],
+        "currentTab": 2
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "b7b510c59824f506",
+    "type": "split",
+    "children": [
+      {
+        "id": "72bbc6bb01dc75a6",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "beeccd363f7a7f99",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {
+                "sortOrder": "alphabetical",
+                "autoReveal": false,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-folder-closed",
+              "title": "Файловый менеджер"
+            }
+          },
+          {
+            "id": "abb21dacd8ac260e",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              },
+              "icon": "lucide-search",
+              "title": "Поиск"
+            }
+          },
+          {
+            "id": "05cceeeda3480d51",
+            "type": "leaf",
+            "state": {
+              "type": "bookmarks",
+              "state": {
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-bookmark",
+              "title": "Закладки"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300,
+    "collapsed": true
+  },
+  "right": {
+    "id": "3d18de03aaa99a05",
+    "type": "split",
+    "children": [
+      {
+        "id": "8952c5264ec21ee8",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "c4c15e1ca44713db",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-coming-in",
+              "title": "Обратные ссылки"
+            }
+          },
+          {
+            "id": "3c55afbd91f3194c",
+            "type": "leaf",
+            "state": {
+              "type": "outgoing-link",
+              "state": {
+                "linksCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-going-out",
+              "title": "Исходящие ссылки"
+            }
+          },
+          {
+            "id": "d3b99ce241e92976",
+            "type": "leaf",
+            "state": {
+              "type": "tag",
+              "state": {
+                "sortOrder": "frequency",
+                "useHierarchy": true,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-tags",
+              "title": "Теги"
+            }
+          },
+          {
+            "id": "664a283a93e5f27f",
+            "type": "leaf",
+            "state": {
+              "type": "all-properties",
+              "state": {
+                "sortOrder": "frequency",
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-archive",
+              "title": "Все свойства"
+            }
+          },
+          {
+            "id": "42a0284af51d2dcc",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {
+                "followCursor": false,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-list",
+              "title": "Структура"
+            }
+          },
+          {
+            "id": "50dd301fa60e8e6c",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Голосовой рекодер 🎙️/Голосовой рекодер 🎙️.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "Голосовой рекодер 🎙️"
+            }
+          },
+          {
+            "id": "abe7a64cd119cc6f",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Голосовой рекодер 🎙️/Голосовой рекодер 🎙️.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "Голосовой рекодер 🎙️"
+            }
+          },
+          {
+            "id": "5f5e7a9da7615fff",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Голосовой рекодер 🎙️/Голосовой рекодер 🎙️.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "Голосовой рекодер 🎙️"
+            }
+          },
+          {
+            "id": "2e07d814ed361b96",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Голосовой рекодер 🎙️/Голосовой рекодер 🎙️.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "Голосовой рекодер 🎙️"
+            }
+          },
+          {
+            "id": "40473b6ca287600b",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Голосовой рекодер 🎙️/Голосовой рекодер 🎙️.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "Голосовой рекодер 🎙️"
+            }
+          },
+          {
+            "id": "1c78dd8dee6adb91",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Голосовой рекодер 🎙️/Голосовой рекодер 🎙️.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "Голосовой рекодер 🎙️"
+            }
+          },
+          {
+            "id": "f9f5ccfd29397bea",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Задачи/🎛️ Панель напоминаний.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "🎛️ Панель напоминаний"
+            }
+          },
+          {
+            "id": "5875d5a280759e83",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Голосовой рекодер 🎙️/Голосовой рекодер 🎙️.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "Голосовой рекодер 🎙️"
+            }
+          },
+          {
+            "id": "58498f57180816cd",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Задачи/🎛️ Панель напоминаний.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "🎛️ Панель напоминаний"
+            }
+          },
+          {
+            "id": "ca88100799678991",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Голосовой рекодер 🎙️/Голосовой рекодер 🎙️.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "Голосовой рекодер 🎙️"
+            }
+          },
+          {
+            "id": "bfe1abbc410f5fa4",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Задачи/🎛️ Панель напоминаний.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "🎛️ Панель напоминаний"
+            }
+          },
+          {
+            "id": "d1c37c3bd311cfd0",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Голосовой рекодер 🎙️/Голосовой рекодер 🎙️.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "Голосовой рекодер 🎙️"
+            }
+          },
+          {
+            "id": "db36105bf87f881a",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Задачи/🎛️ Панель напоминаний.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "🎛️ Панель напоминаний"
+            }
+          },
+          {
+            "id": "e4a6b64decc4eb5d",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Голосовой рекодер 🎙️/Голосовой рекодер 🎙️.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "Голосовой рекодер 🎙️"
+            }
+          },
+          {
+            "id": "a7ce814d4be046ab",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Задачи/🎛️ Панель напоминаний.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "🎛️ Панель напоминаний"
+            }
+          },
+          {
+            "id": "f69dda449bd0b692",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Голосовой рекодер 🎙️/Голосовой рекодер 🎙️.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "Голосовой рекодер 🎙️"
+            }
+          },
+          {
+            "id": "1e39582217afa10d",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Задачи/🎛️ Панель напоминаний.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "🎛️ Панель напоминаний"
+            }
+          },
+          {
+            "id": "07d53d3773ebef30",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Голосовой рекодер 🎙️/Голосовой рекодер 🎙️.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "Голосовой рекодер 🎙️"
+            }
+          },
+          {
+            "id": "9aa3eb81431edcdf",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Задачи/🎛️ Панель напоминаний.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "🎛️ Панель напоминаний"
+            }
+          },
+          {
+            "id": "db37f4a2170a2327",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "🎨 Выделители.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "🎨 Выделители"
+            }
+          },
+          {
+            "id": "92b57d21dcfc0f23",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Голосовой рекодер 🎙️/Голосовой рекодер 🎙️.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "Голосовой рекодер 🎙️"
+            }
+          },
+          {
+            "id": "53336c0e3fc8084a",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Задачи/🎛️ Панель напоминаний.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "🎛️ Панель напоминаний"
+            }
+          },
+          {
+            "id": "4d038b915f03f911",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "🎨 Выделители.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "🎨 Выделители"
+            }
+          },
+          {
+            "id": "fd1c9779b8600adb",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Голосовой рекодер 🎙️/Голосовой рекодер 🎙️.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "Голосовой рекодер 🎙️"
+            }
+          },
+          {
+            "id": "29c2a4188f59e89d",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Задачи/🎛️ Панель напоминаний.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "🎛️ Панель напоминаний"
+            }
+          },
+          {
+            "id": "83b4411e781896d3",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "🎨 Выделители.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "🎨 Выделители"
+            }
+          },
+          {
+            "id": "a20f3372c7e5c250",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Голосовой рекодер 🎙️/Голосовой рекодер 🎙️.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "Голосовой рекодер 🎙️"
+            }
+          },
+          {
+            "id": "3553f0b5c3c228c0",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Задачи/🎛️ Панель напоминаний.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "🎛️ Панель напоминаний"
+            }
+          },
+          {
+            "id": "0ec01d0d6ee04a7e",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "🎨 Выделители.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "🎨 Выделители"
+            }
+          },
+          {
+            "id": "04babd73220137a9",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Голосовой рекодер 🎙️/Голосовой рекодер 🎙️.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "Голосовой рекодер 🎙️"
+            }
+          },
+          {
+            "id": "885d01e75522fe18",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Задачи/🎛️ Панель напоминаний.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "🎛️ Панель напоминаний"
+            }
+          },
+          {
+            "id": "ae4849d1c5a13b61",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "🎨 Выделители.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "🎨 Выделители"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300,
+    "collapsed": true
+  },
+  "left-ribbon": {
+    "hiddenItems": {
+      "daily-notes:Сегодняшняя заметка": false,
+      "audio-recorder:Начать/остановить запись": false,
+      "obsidian-excalidraw-plugin:Создать новый чертеж": false,
+      "templater-obsidian:Templater": false,
+      "omnisearch:Omnisearch": false,
+      "switcher:Меню быстрого перехода": false,
+      "graph:Граф": false,
+      "templates:Вставить шаблон": false,
+      "command-palette:Открыть палитру команд": false,
+      "bases:Создать новую базу": false
+    }
+  },
+  "active": "d02ae0f4b14cbcc7",
+  "lastOpenFiles": [
+    "Учёба 🎓/Предметы/☄️ Физика.md",
+    "⚙️ Центр управления.md",
+    "Библиотека 📚/Книги/📝 Отношения между эго и бессознательным.md",
+    "Библиотека 📚/📖 Все книги.md",
+    "Задачи/⏰ Напоминания.md",
+    "Заметки/11-октябрь-2026.md",
+    "Учёба 🎓/📊 Дашборд.md",
+    "🎨 Выделители.md",
+    "Информация об авторе этих заметок в Obsidian.md",
+    "Учёба 🎓/Задания/✅ Трекер заданий.md",
+    "🏋️ Спорт/📊 Дашборд.md",
+    "🏋️ Спорт/Шаблоны/📝 Кардио.md",
+    "🏋️ Спорт/Тренировки/Руки/Руки 2026-06-18.md",
+    "🏋️ Спорт/Тренировки/Руки/Руки 2026-06-17.md",
+    "Учёба 🎓/Конспекты/2026-10-10 Физика.md",
+    "Cache/profil_abdul_dlya_novoy_ii.md",
+    "Задачи/Инструкция.md",
+    "Задачи/📝Задачи.md",
+    "Задачи/🎛️ Панель напоминаний.md",
+    "Учёба 🎓/Предметы/🧪 Химия.md",
+    "Задачи/sedPpLyOj",
+    "Учёба 🎓/Инструкция.md",
+    "Планы на будущее/Ежедневник/2026/Май.md",
+    "📝Задачи.md",
+    "Задачи",
+    "Учёба 🎓/Предметы/⚖️ Обществознание.md",
+    "Лист для рисования идей/Лист.md",
+    "Планы на будущее/Цели на год/2026/Цели на 2026.md",
+    "Учёба 🎓/sed5UU6hG",
+    "Учёба 🎓/Конспекты",
+    "Cache/Recording 20261008172246.m4a",
+    "🗣 Голосовые/Голосовая 13-06-2026 10-21.webm",
+    "🗣 Голосовые",
+    "🏋️ Спорт/Шаблоны",
+    "Учёба 🎓/Предметы",
+    "Учёба 🎓/Занятия",
+    "Cache/Obsidian_5hOPYOnSzQ.png",
+    "Cache/9191140053.webp",
+    "Cache/7459555248.webp",
+    "Cache/6538556887.webp",
+    "Cache/0194e3fc-eaa1-7fe1-99a7-a6ceb9305882.webp",
+    "Obsidian Vault/Cache/Obsidian_5hOPYOnSzQ.png",
+    "Obsidian Vault/Cache/9191140053.webp",
+    "Obsidian Vault/Cache/7459555248.webp",
+    "Obsidian Vault/Cache/6538556887.webp",
+    "Obsidian Vault/Cache/0194e3fc-eaa1-7fe1-99a7-a6ceb9305882.webp"
+  ]
+}

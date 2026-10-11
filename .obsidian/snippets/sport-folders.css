@@ -1,0 +1,47 @@
+/* ═══════════════════════════════════════════════════════
+   Спортивный сниппет — красная кнопка "+" у папок
+   Совместим с Obsidian 0.15+ и 1.x
+   ═══════════════════════════════════════════════════════ */
+
+/* ── Цвет кнопок в папках (Obsidian сам управляет видимостью) ── */
+
+.nav-folder .nav-buttons-container .nav-action-button,
+.nav-folder .nav-buttons-container .clickable-icon {
+    color: #8f0000 !important;
+    transition: background-color 0.1s, transform 0.1s;
+}
+
+/* SVG-иконки (используют stroke) */
+.nav-folder .nav-buttons-container .nav-action-button svg,
+.nav-folder .nav-buttons-container .clickable-icon svg {
+    stroke: #8f0000 !important;
+    color: #8f0000 !important;
+}
+
+/* Hover по кнопке */
+.nav-folder .nav-buttons-container .nav-action-button:hover,
+.nav-folder .nav-buttons-container .clickable-icon:hover {
+    color: #b30000 !important;
+    background-color: rgba(143, 0, 0, 0.15) !important;
+    border-radius: 4px;
+    transform: scale(1.12);
+}
+
+.nav-folder .nav-buttons-container .nav-action-button:hover svg,
+.nav-folder .nav-buttons-container .clickable-icon:hover svg {
+    stroke: #b30000 !important;
+    color: #b30000 !important;
+}
+
+/* Поддержка tree-item API (Obsidian 1.5+) */
+.tree-item.nav-folder .tree-item-self .nav-buttons-container .clickable-icon {
+    color: #8f0000 !important;
+}
+.tree-item.nav-folder .tree-item-self .nav-buttons-container .clickable-icon svg {
+    stroke: #8f0000 !important;
+}
+.tree-item.nav-folder .tree-item-self .nav-buttons-container .clickable-icon:hover {
+    color: #b30000 !important;
+    background-color: rgba(143, 0, 0, 0.15) !important;
+    border-radius: 4px;
+}
