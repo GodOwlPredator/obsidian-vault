@@ -22,37 +22,8 @@
               "icon": "lucide-file",
               "title": "⚙️ Центр управления"
             }
-          },
-          {
-            "id": "1b8d9991d8bbe878",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Учёба 🎓/Предметы/☄️ Физика.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "☄️ Физика"
-            }
-          },
-          {
-            "id": "d02ae0f4b14cbcc7",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Библиотека 📚/Книги/📝 Отношения между эго и бессознательным.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "📝 Отношения между эго и бессознательным"
-            }
           }
-        ],
-        "currentTab": 2
+        ]
       }
     ],
     "direction": "vertical"
@@ -646,6 +617,48 @@
               "icon": "lucide-file",
               "title": "🎨 Выделители"
             }
+          },
+          {
+            "id": "605500198c40f3b2",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Голосовой рекодер 🎙️/Голосовой рекодер 🎙️.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "Голосовой рекодер 🎙️"
+            }
+          },
+          {
+            "id": "c8684e01dd1b7a11",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Задачи/🎛️ Панель напоминаний.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "🎛️ Панель напоминаний"
+            }
+          },
+          {
+            "id": "19d9dfcbf50555c2",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "🎨 Выделители.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "🎨 Выделители"
+            }
           }
         ]
       }
@@ -668,11 +681,11 @@
       "bases:Создать новую базу": false
     }
   },
-  "active": "d02ae0f4b14cbcc7",
+  "active": "5dea0305a6047c3e",
   "lastOpenFiles": [
     "Учёба 🎓/Предметы/☄️ Физика.md",
-    "⚙️ Центр управления.md",
     "Библиотека 📚/Книги/📝 Отношения между эго и бессознательным.md",
+    "⚙️ Центр управления.md",
     "Библиотека 📚/📖 Все книги.md",
     "Задачи/⏰ Напоминания.md",
     "Заметки/11-октябрь-2026.md",
