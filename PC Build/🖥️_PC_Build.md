@@ -169,6 +169,9 @@ let sortMode   = "none";  // none | asc | desc
     .pcb-sub.bad { color:#8f0000;font-weight:600; }
     .pcb-budget-input { background:#1e1e1e;border:1px solid #2e2e2e;border-radius:6px;color:#e0e0e0;font-size:13px;font-weight:700;padding:4px 10px;outline:none;font-family:system-ui,sans-serif;width:120px;transition:border-color 0.14s; }
     .pcb-budget-input:focus { border-color:#8f0000; }
+    .pcb-footer-btn { background:#1e1e1e;border:1px solid #2e2e2e;border-radius:6px;color:#c9c9c9;font-size:11px;font-weight:600;padding:5px 12px;cursor:pointer;font-family:system-ui,sans-serif;transition:border-color 0.14s,color 0.14s; }
+    .pcb-footer-btn:hover { border-color:#8f0000;color:#e0e0e0; }
+    .pcb-footer-btn:disabled { opacity:0.5;cursor:default; }
     .pcb-hint { font-size:10px;color:#2a2a2a;margin-top:12px; }
     .pcb-footer-badge { align-self:center;font-family:system-ui,sans-serif;font-size:10px;font-weight:700;letter-spacing:0.08em;color:#8f0000;background:#1a0000;border:1px solid #3d0000;border-radius:20px;padding:5px 14px;white-space:nowrap; }
   `;
@@ -505,6 +508,32 @@ budgetInput.type = "number"; budgetInput.placeholder = "200000";
 budgetInput.value = data.budget || "";
 budgetInput.addEventListener("change", () => { data.budget = budgetInput.value.trim(); saveData().then(refreshFooter); });
 budgetSubEl = c3.createEl("div",{ cls:"pcb-sub" });
+
+    const c3b = footer.createEl("div",{ cls:"pcb-fcol", attr:{"style":"min-width:170px;"} });
+    c3b.createEl("div",{ cls:"pcb-footer-lbl", text:"Цены с DNS" });
+    const dnsBtn = c3b.createEl("button",{ cls:"pcb-footer-btn", text:"🔄 Обновить с DNS" });
+    const dnsStatus = c3b.createEl("div",{ cls:"pcb-sub" });
+    async function loadDnsStatus() {
+      try {
+        const st = await app.vault.adapter.read(".dns-prices-status");
+        const j = JSON.parse(st);
+        const ts = j.ts ? new Date(j.ts) : null;
+        if (!ts) { dnsStatus.textContent = "нет данных"; return; }
+        const m = Math.floor((Date.now()-ts)/60000);
+        const rel = m < 1 ? "только что" : m < 60 ? m + " мин назад" : Math.floor(m/60) + " ч назад";
+        dnsStatus.textContent = "обновлено " + rel + " · " + (j.got||0) + "/" + (j.total||0) + (j.changed ? " (+" + j.changed + ")" : "");
+      } catch(_) { dnsStatus.textContent = "нет данных"; }
+    }
+    dnsBtn.addEventListener("click", async () => {
+      try {
+        await app.vault.adapter.write(".dns-prices-request", String(Date.now()));
+        dnsBtn.textContent = "⏳ Запущено...";
+        dnsBtn.disabled = true;
+        setTimeout(()=>{ dnsBtn.textContent="🔄 Обновить с DNS"; dnsBtn.disabled=false; }, 60000);
+      } catch(e) { dnsBtn.textContent="⚠ Ошибка"; setTimeout(()=>{ dnsBtn.textContent="🔄 Обновить с DNS"; dnsBtn.disabled=false; },2000); }
+    });
+    await loadDnsStatus();
+    setInterval(loadDnsStatus, 30000);
 
 countBadge = footer.createEl("div",{ cls:"pcb-footer-badge" });
 
