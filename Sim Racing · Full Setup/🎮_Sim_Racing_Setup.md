@@ -169,6 +169,7 @@ let sortMode   = "none";  // none | asc | desc
     .sr-budget-input { background:#1e1e1e;border:1px solid #2e2e2e;border-radius:6px;color:#e0e0e0;font-size:13px;font-weight:700;padding:4px 10px;outline:none;font-family:system-ui,sans-serif;width:120px;transition:border-color 0.14s; }
     .sr-budget-input:focus { border-color:#8f0000; }
     .sr-hint { font-size:10px;color:#2a2a2a;margin-top:12px; }
+    .sr-footer-badge { align-self:center;font-family:system-ui,sans-serif;font-size:10px;font-weight:700;letter-spacing:0.08em;color:#8f0000;background:#1a0000;border:1px solid #3d0000;border-radius:20px;padding:5px 14px;white-space:nowrap; }
   `;
 }
 
