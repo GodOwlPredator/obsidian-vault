@@ -1,0 +1,204 @@
+/* ═══════════════════════════════════════════════════════════════════
+   3D-зона — единая дизайн-система (сниппет)
+   Все страницы 3D-вики и галереи используют классы .d3-*
+   Стили подключаются и автоматически (страница читает этот файл),
+   и обычным путём, если сниппет включён в настройках.
+   ═══════════════════════════════════════════════════════════════════ */
+
+:root { --d3-loaded: 1; }
+
+.d3-root {
+    --d3-accent:        #a80000;
+    --d3-accent-light:  #d13b3b;
+    --d3-accent-dim:    #3d0000;
+    --d3-card:          #1e1e1e;
+    --d3-border:        #2e2e2e;
+    --d3-bg:            #161616;
+    --d3-text:          #e0e0e0;
+    --d3-muted:         #8a8a8a;
+    --d3-muted2:        #5a5a5a;
+    --d3-empty:         #2a2a2a;
+    --d3-empty-border:  #444;
+    --d3-green:         #3f9d3f;
+    --d3-blue:          #4a90d9;
+    --d3-yellow:        #c9a227;
+
+    color: var(--d3-text);
+    font-family: var(--font-interface, -apple-system, "Segoe UI", sans-serif);
+    line-height: 1.45;
+}
+.theme-light .d3-root {
+    --d3-card:         #f6f6f6;
+    --d3-border:       #ddd;
+    --d3-bg:           #fff;
+    --d3-text:         #1f1f1f;
+    --d3-muted:        #6b6b6b;
+    --d3-muted2:       #9a9a9a;
+    --d3-empty:        #ececec;
+    --d3-empty-border: #c8c8c8;
+}
+
+/* ── Панель инструментов ─────────────────────────────────────────── */
+.d3-top { display: flex; gap: 6px; flex-wrap: wrap; align-items: center; margin: 0 0 14px; }
+.d3-top-sep { flex: 1 1 16px; }
+
+.d3-btn {
+    padding: 5px 12px; border-radius: 8px; cursor: pointer;
+    border: 1px solid var(--d3-border); background: var(--d3-card); color: var(--d3-muted);
+    font-size: 12px; font-family: inherit; transition: border-color .14s, color .14s, background-color .14s;
+}
+.d3-btn:hover { border-color: var(--d3-accent); color: var(--d3-text); }
+.d3-btn-accent {
+    border-color: var(--d3-accent); background: var(--d3-accent-dim); color: var(--d3-accent-light); font-weight: 600;
+}
+.d3-btn-accent:hover { background: var(--d3-accent); color: #fff; }
+.d3-btn-primary {
+    background: var(--d3-accent); border: 1px solid var(--d3-accent-light); color: #fff; font-weight: 600;
+}
+.d3-btn-primary:hover { background: var(--d3-accent-light); color: #fff; }
+.d3-btn-ghost { background: transparent; color: var(--d3-muted); }
+.d3-btn-sm { padding: 3px 10px; font-size: 11px; border-radius: 6px; }
+
+/* ── Статистика ──────────────────────────────────────────────────── */
+.d3-stats { display: grid; grid-template-columns: repeat(auto-fit, minmax(96px, 1fr)); gap: 10px; margin-bottom: 16px; }
+.d3-stat { background: var(--d3-card); border: 1px solid var(--d3-border); border-radius: 10px; padding: 12px 8px; text-align: center; }
+.d3-stat-val { font-size: 22px; font-weight: 700; color: var(--d3-accent-light); line-height: 1.1; }
+.d3-stat-lbl { font-size: 10px; color: var(--d3-muted); text-transform: uppercase; letter-spacing: .07em; margin-top: 4px; }
+.d3-section { font-size: 11px; font-weight: 700; color: var(--d3-muted); text-transform: uppercase; letter-spacing: .08em;
+              margin: 22px 0 10px; display: flex; align-items: center; gap: 8px; }
+.d3-section::after { content: ""; flex: 1; height: 1px; background: var(--d3-border); }
+
+/* ── Поля ввода ──────────────────────────────────────────────────── */
+.d3-toolrow { display: flex; gap: 8px; align-items: center; margin-bottom: 10px; }
+.d3-input, .d3-select {
+    width: 100%; box-sizing: border-box; background: var(--d3-bg); border: 1px solid var(--d3-border);
+    border-radius: 8px; padding: 7px 12px; color: var(--d3-text); font-size: 12px; font-family: inherit; outline: none;
+}
+.d3-select { width: auto; cursor: pointer; }
+.d3-input:focus, .d3-select:focus { border-color: var(--d3-accent); }
+.d3-input::placeholder { color: var(--d3-muted2); }
+
+/* ── Чипы-фильтры ────────────────────────────────────────────────── */
+.d3-filters { display: flex; gap: 6px; flex-wrap: wrap; margin-bottom: 10px; }
+.d3-chip {
+    padding: 4px 13px; border-radius: 20px; cursor: pointer;
+    border: 1px solid var(--d3-border); background: var(--d3-card); color: var(--d3-muted);
+    font-size: 12px; font-family: inherit; transition: background-color .15s, border-color .15s, color .15s;
+}
+.d3-chip:hover { border-color: var(--d3-accent); color: var(--d3-text); }
+.d3-chip.is-active { background: var(--d3-accent); border-color: var(--d3-accent-light); color: #fff; }
+.d3-tagchip {
+    padding: 2px 9px; border-radius: 12px; cursor: pointer;
+    border: 1px solid var(--d3-border); background: var(--d3-empty); color: var(--d3-muted);
+    font-size: 11px; font-family: inherit; transition: background-color .15s, border-color .15s, color .15s;
+}
+.d3-tagchip:hover { border-color: var(--d3-accent); color: var(--d3-text); }
+.d3-tagchip.is-active { border-color: var(--d3-accent); color: var(--d3-text); background: var(--d3-accent-dim); }
+
+/* ── Сетка и карточки ────────────────────────────────────────────── */
+.d3-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); gap: 12px; }
+.d3-card {
+    background: var(--d3-card); border: 1px solid var(--d3-border); border-radius: 10px; overflow: hidden;
+    cursor: pointer; transition: transform .15s, box-shadow .15s, border-color .15s;
+}
+.d3-card:hover { transform: translateY(-3px); box-shadow: 0 8px 24px rgba(168,0,0,.22); border-color: var(--d3-accent); }
+.d3-cover { width: 100%; aspect-ratio: 16 / 10; object-fit: cover; display: block; background: var(--d3-empty); }
+.d3-cover-ph {
+    width: 100%; aspect-ratio: 16 / 10; display: flex; align-items: center; justify-content: center;
+    font-size: 30px; background: linear-gradient(135deg, var(--d3-accent-dim), #101010); color: var(--d3-muted2);
+}
+.d3-card-body { padding: 12px 14px; }
+.d3-card-head { display: flex; justify-content: space-between; align-items: flex-start; gap: 6px; margin-bottom: 6px; }
+.d3-card-title { font-size: 13px; font-weight: 600; color: var(--d3-text); line-height: 1.3; }
+.d3-card-desc {
+    font-size: 11px; color: var(--d3-muted); line-height: 1.4; margin-bottom: 8px;
+    display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden;
+}
+.d3-badge {
+    font-size: 9px; font-weight: 700; text-transform: uppercase; padding: 2px 7px; border-radius: 4px;
+    border: 1px solid; flex-shrink: 0; white-space: nowrap;
+}
+.d3-tags { display: flex; gap: 5px; flex-wrap: wrap; margin-bottom: 4px; }
+.d3-tag { font-size: 10px; background: var(--d3-empty); color: var(--d3-muted); border-radius: 4px; padding: 2px 7px; border: 1px solid var(--d3-border); }
+.d3-date { font-size: 10px; color: var(--d3-muted2); margin-top: 6px; }
+.d3-empty { color: var(--d3-muted); font-size: 14px; padding: 40px 0; text-align: center; }
+
+/* ── Крупная карточка внутри заметки ─────────────────────────────── */
+.d3-view { background: var(--d3-card); border: 1px solid var(--d3-border); border-radius: 12px; overflow: hidden; margin-bottom: 4px; }
+.d3-view-accent { border-left: 4px solid var(--d3-accent); }
+.d3-view-banner { width: 100%; max-height: 300px; object-fit: cover; display: block; cursor: zoom-in; }
+.d3-view-body { padding: 16px 20px; }
+.d3-view-title { margin: 0 0 12px; font-size: 19px; font-weight: 700; color: var(--d3-text); }
+.d3-view-desc { font-size: 13px; color: var(--d3-text); line-height: 1.55; padding-top: 10px; border-top: 1px solid var(--d3-border); margin: 10px 0; }
+
+/* ── Ключ → значение ─────────────────────────────────────────────── */
+.d3-kv { display: flex; gap: 8px; align-items: baseline; margin-bottom: 7px; font-size: 12px; }
+.d3-kv-k { color: var(--d3-muted); min-width: 96px; flex-shrink: 0; font-size: 11px; }
+.d3-kv-v { color: var(--d3-text); display: flex; gap: 6px; flex-wrap: wrap; align-items: center; }
+.d3-link { color: var(--d3-accent-light); text-decoration: none; border-bottom: 1px dashed var(--d3-accent); cursor: pointer; }
+.d3-link:hover { color: var(--d3-accent-light); border-bottom-style: solid; }
+.d3-pill { background: var(--d3-empty); color: var(--d3-muted); border-radius: 5px; padding: 2px 9px; font-size: 11px; border: 1px solid var(--d3-empty-border); }
+
+/* ── Кнопки-статусы и звёзды ─────────────────────────────────────── */
+.d3-row { display: flex; gap: 5px; flex-wrap: wrap; align-items: center; margin-bottom: 9px; }
+.d3-row-lbl { font-size: 11px; color: var(--d3-muted); margin-right: 2px; }
+.d3-status {
+    padding: 3px 10px; border-radius: 5px; cursor: pointer; font-size: 11px; font-family: inherit;
+    border: 1px solid var(--d3-empty-border); background: var(--d3-empty); color: var(--d3-muted);
+    transition: border-color .15s, color .15s, background-color .15s;
+}
+.d3-status:hover { border-color: var(--d3-accent); color: var(--d3-text); }
+.d3-status.is-active { color: #fff; font-weight: 700; }
+.d3-stars { font-size: 17px; letter-spacing: 2px; cursor: pointer; user-select: none; color: var(--d3-empty-border); }
+.d3-stars b { color: var(--d3-accent-light); font-weight: 400; }
+
+/* ── Прогресс ────────────────────────────────────────────────────── */
+.d3-progress { height: 10px; border-radius: 5px; background: var(--d3-empty); border: 1px solid var(--d3-border); overflow: hidden; cursor: pointer; }
+.d3-progress > i { display: block; height: 100%; background: linear-gradient(90deg, var(--d3-accent), var(--d3-accent-light)); transition: width .2s; }
+.d3-progress-lbl { font-size: 11px; color: var(--d3-muted); margin: 4px 0 10px; }
+
+/* ── Чеклист ─────────────────────────────────────────────────────── */
+.d3-check { display: flex; gap: 8px; align-items: flex-start; padding: 5px 0; border-bottom: 1px solid var(--d3-border); font-size: 13px; }
+.d3-check:last-child { border-bottom: none; }
+.d3-check input { margin-top: 3px; accent-color: var(--d3-accent); cursor: pointer; flex-shrink: 0; }
+.d3-check span { color: var(--d3-text); }
+.d3-check.is-done span { color: var(--d3-muted); text-decoration: line-through; }
+
+/* ── Граф связей ─────────────────────────────────────────────────── */
+.d3-graph { width: 100%; height: 300px; display: block; }
+.d3-graph line { stroke: var(--d3-border); stroke-width: 1.5; }
+.d3-graph text { fill: var(--d3-text); font-size: 11px; font-family: inherit; pointer-events: none; }
+.d3-graph circle { cursor: pointer; }
+
+/* ── Полосовые диаграммы (портфолио) ─────────────────────────────── */
+.d3-bars { display: flex; flex-direction: column; gap: 8px; }
+.d3-bar-row { display: grid; grid-template-columns: 130px 1fr 42px; gap: 10px; align-items: center; font-size: 12px; }
+.d3-bar-lbl { color: var(--d3-muted); overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.d3-bar-track { background: var(--d3-empty); border-radius: 5px; height: 14px; overflow: hidden; }
+.d3-bar-fill { height: 100%; background: linear-gradient(90deg, var(--d3-accent), var(--d3-accent-light)); }
+.d3-bar-num { color: var(--d3-text); text-align: right; font-variant-numeric: tabular-nums; }
+
+/* ── Модалки ─────────────────────────────────────────────────────── */
+.d3-modal { position: fixed; inset: 0; background: rgba(0,0,0,.62); display: flex; align-items: center; justify-content: center; z-index: 100000; }
+.d3-modal-box { background: var(--d3-card); border: 1px solid var(--d3-border); border-radius: 12px; padding: 18px 20px; width: min(480px, 92vw); box-shadow: 0 24px 70px rgba(0,0,0,.55); }
+.d3-modal-title { font-size: 15px; font-weight: 700; color: var(--d3-text); margin-bottom: 14px; }
+.d3-field { margin-bottom: 10px; }
+.d3-field label { display: block; font-size: 11px; color: var(--d3-muted); margin-bottom: 4px; }
+.d3-row2 { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
+.d3-modal-btns { display: flex; justify-content: flex-end; gap: 8px; margin-top: 14px; }
+
+/* ── Лайтбокс ────────────────────────────────────────────────────── */
+.d3-lightbox { position: fixed; inset: 0; background: rgba(0,0,0,.9); display: flex; align-items: center; justify-content: center; z-index: 100001; cursor: zoom-out; }
+.d3-lightbox img { max-width: 92vw; max-height: 92vh; border-radius: 10px; box-shadow: 0 30px 90px rgba(0,0,0,.7); }
+.d3-lb-hint { position: fixed; bottom: 18px; left: 0; right: 0; text-align: center; color: #999; font-size: 12px; }
+
+/* ── Избранные работы ────────────────────────────────────────────── */
+.d3-feat { background: var(--d3-card); border: 1px solid var(--d3-border); border-left: 4px solid var(--d3-accent); border-radius: 10px; padding: 14px 18px; margin-bottom: 14px; }
+.d3-feat-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(240px, 1fr)); gap: 12px; }
+.d3-feat-card { background: var(--d3-empty); border: 1px solid var(--d3-border); border-radius: 8px; overflow: hidden; cursor: pointer; transition: border-color .15s; }
+.d3-feat-card:hover { border-color: var(--d3-accent); }
+.d3-feat-img { width: 100%; height: 140px; object-fit: cover; display: block; cursor: zoom-in; }
+.d3-feat-ph { width: 100%; height: 140px; display: flex; align-items: center; justify-content: center; font-size: 38px; background: linear-gradient(135deg, var(--d3-accent-dim), #101010); }
+.d3-feat-info { padding: 10px; }
+
+.workspace-leaf-content[data-type="markdown"] .d3-grid { margin-bottom: 20px; }
