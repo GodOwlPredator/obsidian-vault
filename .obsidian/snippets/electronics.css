@@ -1,0 +1,244 @@
+/* ═══════════════════════════════════════════════════════════════════
+   ⚡ Электроника — единая дизайн-система (сниппет)
+   Все страницы раздела используют классы .el-*
+   Стили подключаются и автоматически (страница читает этот файл),
+   и обычным путём, если сниппет включён в настройках.
+   ═══════════════════════════════════════════════════════════════════ */
+
+:root { --el-loaded: 1; }
+
+.el-root {
+    --el-accent:        #8f0000;
+    --el-accent-light:  #c53030;
+    --el-accent-dim:    #340000;
+    --el-card:          #1e1e1e;
+    --el-border:        #2e2e2e;
+    --el-bg:            #161616;
+    --el-text:          #e0e0e0;
+    --el-muted:         #8a8a8a;
+    --el-muted2:        #5a5a5a;
+    --el-empty:         #2a2a2a;
+    --el-empty-border:  #444;
+    --el-green:         #3f9d3f;
+    --el-blue:          #4a90d9;
+    --el-yellow:        #c9a227;
+
+    color: var(--el-text);
+    font-family: var(--font-interface, -apple-system, "Segoe UI", sans-serif);
+    line-height: 1.45;
+}
+.theme-light .el-root {
+    --el-card:         #f6f6f6;
+    --el-border:       #ddd;
+    --el-bg:           #fff;
+    --el-text:         #1f1f1f;
+    --el-muted:        #6b6b6b;
+    --el-muted2:       #9a9a9a;
+    --el-empty:        #ececec;
+    --el-empty-border: #c8c8c8;
+}
+
+/* ── Панель кнопок ──────────────────────────────────────────────── */
+.el-top { display: flex; gap: 6px; flex-wrap: wrap; align-items: center; margin: 0 0 14px; }
+.el-top-sep { flex: 1 1 16px; }
+
+.el-btn {
+    padding: 5px 12px; border-radius: 8px; cursor: pointer;
+    border: 1px solid var(--el-border); background: var(--el-card); color: var(--el-muted);
+    font-size: 12px; font-family: inherit; transition: border-color .14s, color .14s, background-color .14s;
+}
+.el-btn:hover { border-color: var(--el-accent); color: var(--el-text); }
+.el-btn-accent {
+    border-color: var(--el-accent); background: var(--el-accent-dim); color: var(--el-accent-light); font-weight: 600;
+}
+.el-btn-accent:hover { background: var(--el-accent); color: #fff; }
+.el-btn-primary {
+    background: var(--el-accent); border: 1px solid var(--el-accent-light); color: #fff; font-weight: 600;
+}
+.el-btn-primary:hover { background: var(--el-accent-light); color: #fff; }
+.el-btn-ghost { background: transparent; color: var(--el-muted); }
+.el-btn-sm { padding: 3px 10px; font-size: 11px; border-radius: 6px; }
+.el-btn.is-on { background: var(--el-accent); border-color: var(--el-accent-light); color: #fff; }
+
+/* ── Секции ─────────────────────────────────────────────────────── */
+.el-section {
+    font-size: 11px; font-weight: 700; color: var(--el-muted); text-transform: uppercase; letter-spacing: .08em;
+    margin: 22px 0 10px; display: flex; align-items: center; gap: 8px;
+}
+.el-section::after { content: ""; flex: 1; height: 1px; background: var(--el-border); }
+
+/* ── Статистика ─────────────────────────────────────────────────── */
+.el-stats { display: grid; grid-template-columns: repeat(auto-fit, minmax(88px, 1fr)); gap: 10px; margin-bottom: 16px; }
+.el-stat { background: var(--el-card); border: 1px solid var(--el-border); border-radius: 10px; padding: 12px 8px; text-align: center; }
+.el-stat-val { font-size: 22px; font-weight: 700; color: var(--el-accent-light); line-height: 1.1; }
+.el-stat-lbl { font-size: 10px; color: var(--el-muted); text-transform: uppercase; letter-spacing: .07em; margin-top: 4px; }
+
+/* ── Поля ввода ─────────────────────────────────────────────────── */
+.el-toolrow { display: flex; gap: 8px; align-items: center; margin-bottom: 10px; flex-wrap: wrap; }
+.el-input, .el-select {
+    width: 100%; box-sizing: border-box; background: var(--el-bg); border: 1px solid var(--el-border);
+    border-radius: 8px; padding: 7px 12px; color: var(--el-text); font-size: 12px; font-family: inherit; outline: none;
+}
+.el-toolrow .el-input { flex: 1 1 220px; }
+.el-select { width: auto; cursor: pointer; }
+.el-input:focus, .el-select:focus { border-color: var(--el-accent); }
+.el-input::placeholder { color: var(--el-muted2); }
+textarea.el-input { resize: vertical; line-height: 1.4; }
+
+/* ── Чипы-фильтры ───────────────────────────────────────────────── */
+.el-filters { display: flex; gap: 6px; flex-wrap: wrap; margin-bottom: 10px; }
+.el-chip {
+    padding: 4px 13px; border-radius: 20px; cursor: pointer;
+    border: 1px solid var(--el-border); background: var(--el-card); color: var(--el-muted);
+    font-size: 12px; font-family: inherit; transition: background-color .15s, border-color .15s, color .15s;
+}
+.el-chip:hover { border-color: var(--el-accent); color: var(--el-text); }
+.el-chip.is-active { background: var(--el-accent); border-color: var(--el-accent-light); color: #fff; }
+.el-tagchip {
+    padding: 2px 9px; border-radius: 12px; cursor: pointer;
+    border: 1px solid var(--el-border); background: var(--el-empty); color: var(--el-muted);
+    font-size: 11px; font-family: inherit; transition: background-color .15s, border-color .15s, color .15s;
+}
+.el-tagchip:hover { border-color: var(--el-accent); color: var(--el-text); }
+.el-tagchip.is-active { border-color: var(--el-accent); color: var(--el-text); background: var(--el-accent-dim); }
+
+/* ── Сетка и карточки ───────────────────────────────────────────── */
+.el-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(230px, 1fr)); gap: 12px; margin-bottom: 20px; }
+.el-card {
+    background: var(--el-card); border: 1px solid var(--el-border); border-radius: 10px; overflow: hidden;
+    cursor: pointer; transition: transform .15s, box-shadow .15s, border-color .15s;
+}
+.el-card:hover { transform: translateY(-3px); box-shadow: 0 8px 24px rgba(143,0,0,.22); border-color: var(--el-accent); }
+.el-cover { width: 100%; aspect-ratio: 16 / 10; object-fit: cover; display: block; background: var(--el-empty); }
+.el-cover-ph {
+    width: 100%; aspect-ratio: 16 / 10; display: flex; align-items: center; justify-content: center;
+    font-size: 30px; background: linear-gradient(135deg, var(--el-accent-dim), #101010); color: var(--el-muted2);
+}
+.el-card-body { padding: 12px 14px; }
+.el-card-head { display: flex; justify-content: space-between; align-items: flex-start; gap: 6px; margin-bottom: 6px; }
+.el-card-title { font-size: 13px; font-weight: 600; color: var(--el-text); line-height: 1.3; }
+.el-card-desc {
+    font-size: 11px; color: var(--el-muted); line-height: 1.4; margin-bottom: 8px;
+    display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden;
+}
+.el-badge {
+    font-size: 9px; font-weight: 700; text-transform: uppercase; padding: 2px 7px; border-radius: 4px;
+    border: 1px solid; flex-shrink: 0; white-space: nowrap;
+}
+.el-tags { display: flex; gap: 5px; flex-wrap: wrap; margin-bottom: 4px; }
+.el-tag { font-size: 10px; background: var(--el-empty); color: var(--el-muted); border-radius: 4px; padding: 2px 7px; border: 1px solid var(--el-border); }
+.el-empty { color: var(--el-muted); font-size: 14px; padding: 40px 0; text-align: center; }
+.el-warn {
+    background: #2a2210; border: 1px solid var(--el-yellow); color: var(--el-yellow);
+    border-radius: 8px; padding: 8px 12px; font-size: 12px; margin-bottom: 12px;
+}
+
+/* ── Карточка внутри заметки ────────────────────────────────────── */
+.el-view { background: var(--el-card); border: 1px solid var(--el-border); border-radius: 12px; overflow: hidden; margin-bottom: 4px; }
+.el-view-accent { border-left: 4px solid var(--el-accent); }
+.el-view-banner { width: 100%; max-height: 300px; object-fit: cover; display: block; cursor: zoom-in; }
+.el-view-body { padding: 16px 20px; }
+.el-view-title { margin: 0 0 12px; font-size: 19px; font-weight: 700; color: var(--el-text); }
+.el-view-desc { font-size: 13px; color: var(--el-text); line-height: 1.55; padding-top: 10px; border-top: 1px solid var(--el-border); margin: 10px 0; }
+
+/* ── Ключ → значение ────────────────────────────────────────────── */
+.el-kv { display: flex; gap: 8px; align-items: baseline; margin-bottom: 7px; font-size: 12px; }
+.el-kv-k { color: var(--el-muted); min-width: 96px; flex-shrink: 0; font-size: 11px; }
+.el-kv-v { color: var(--el-text); display: flex; gap: 6px; flex-wrap: wrap; align-items: center; }
+.el-link { color: var(--el-accent-light); text-decoration: none; border-bottom: 1px dashed var(--el-accent); cursor: pointer; }
+.el-pill {
+    background: var(--el-empty); color: var(--el-muted); border-radius: 5px; padding: 2px 9px; font-size: 11px;
+    border: 1px solid var(--el-empty-border);
+}
+.el-pill.is-link { cursor: pointer; transition: color .15s, border-color .15s; }
+.el-pill.is-link:hover { color: var(--el-text); border-color: var(--el-accent); }
+
+/* ── Кнопки-статусы и звёзды ────────────────────────────────────── */
+.el-row { display: flex; gap: 5px; flex-wrap: wrap; align-items: center; margin-bottom: 9px; }
+.el-row-lbl { font-size: 11px; color: var(--el-muted); margin-right: 2px; }
+.el-status {
+    padding: 3px 10px; border-radius: 5px; cursor: pointer; font-size: 11px; font-family: inherit;
+    border: 1px solid var(--el-empty-border); background: var(--el-empty); color: var(--el-muted);
+    transition: border-color .15s, color .15s, background-color .15s;
+}
+.el-status:hover { border-color: var(--el-accent); color: var(--el-text); }
+.el-status.is-active { color: #fff; font-weight: 700; }
+.el-stars { font-size: 17px; letter-spacing: 2px; cursor: pointer; user-select: none; color: var(--el-empty-border); }
+.el-stars b { color: var(--el-accent-light); font-weight: 400; }
+
+/* ── Склад: счётчик ─────────────────────────────────────────────── */
+.el-stock { display: flex; align-items: center; gap: 7px; margin: 4px 0 12px; }
+.el-stock-num { font-size: 22px; font-weight: 700; color: var(--el-text); min-width: 26px; text-align: right; }
+.el-stock-unit { font-size: 12px; color: var(--el-muted); }
+.el-step {
+    width: 26px; height: 26px; border-radius: 7px; cursor: pointer; font-size: 15px; line-height: 1;
+    border: 1px solid var(--el-border); background: var(--el-empty); color: var(--el-text); font-family: inherit;
+}
+.el-step:hover { border-color: var(--el-accent); color: var(--el-accent-light); }
+.el-step.is-off { opacity: .35; cursor: default; }
+.el-low { font-size: 11px; font-weight: 700; color: var(--el-yellow); }
+.el-stepwrap { display: inline-flex; align-items: center; gap: 5px; }
+.el-stepwrap b { min-width: 26px; text-align: center; font-variant-numeric: tabular-nums; }
+
+/* ── Прогресс ───────────────────────────────────────────────────── */
+.el-progress { height: 10px; border-radius: 5px; background: var(--el-empty); border: 1px solid var(--el-border); overflow: hidden; cursor: pointer; }
+.el-progress > i { display: block; height: 100%; background: linear-gradient(90deg, var(--el-accent), var(--el-accent-light)); transition: width .2s; }
+.el-progress-lbl { font-size: 11px; color: var(--el-muted); margin: 4px 0 10px; }
+
+/* ── Чеклист ────────────────────────────────────────────────────── */
+.el-check { display: flex; gap: 8px; align-items: flex-start; padding: 5px 0; border-bottom: 1px solid var(--el-border); font-size: 13px; }
+.el-check:last-child { border-bottom: none; }
+.el-check input { margin-top: 3px; accent-color: var(--el-accent); cursor: pointer; flex-shrink: 0; }
+.el-check span { color: var(--el-text); }
+.el-check.is-done span { color: var(--el-muted); text-decoration: line-through; }
+
+/* ── Граф связей ────────────────────────────────────────────────── */
+.el-graph { width: 100%; height: 300px; display: block; }
+.el-graph line { stroke: var(--el-border); stroke-width: 1.5; }
+.el-graph text { fill: var(--el-text); font-size: 11px; font-family: inherit; pointer-events: none; }
+.el-graph circle { cursor: pointer; }
+
+/* ── Избранные карточки ─────────────────────────────────────────── */
+.el-feat-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(210px, 1fr)); gap: 12px; margin-bottom: 6px; }
+.el-feat-card { background: var(--el-empty); border: 1px solid var(--el-border); border-radius: 8px; overflow: hidden; cursor: pointer; transition: border-color .15s; }
+.el-feat-card:hover { border-color: var(--el-accent); }
+.el-feat-img { width: 100%; height: 130px; object-fit: cover; display: block; cursor: zoom-in; }
+.el-feat-ph { width: 100%; height: 130px; display: flex; align-items: center; justify-content: center; font-size: 34px; background: linear-gradient(135deg, var(--el-accent-dim), #101010); }
+.el-feat-info { padding: 10px; }
+
+/* ── Навигация ──────────────────────────────────────────────────── */
+.el-nav { display: flex; gap: 6px; flex-wrap: wrap; margin-top: 14px; }
+
+/* ── Таблица склада ─────────────────────────────────────────────── */
+.el-tscroll { overflow-x: auto; border: 1px solid var(--el-border); border-radius: 10px; background: var(--el-card); margin-bottom: 16px; }
+.el-table { min-width: 720px; }
+.el-trow {
+    display: grid; grid-template-columns: 104px minmax(140px, 1.3fr) 100px 90px 148px minmax(90px, 1fr);
+    gap: 10px; align-items: center; padding: 8px 12px; border-bottom: 1px solid var(--el-border); font-size: 12px;
+}
+.el-trow:last-child { border-bottom: none; }
+.el-trow.is-low { background: rgba(201, 162, 39, .08); }
+.el-thead {
+    font-size: 10px; text-transform: uppercase; letter-spacing: .07em; color: var(--el-muted); font-weight: 700;
+    background: var(--el-bg); position: sticky; top: 0;
+}
+.el-tcell { color: var(--el-text); min-width: 0; overflow: hidden; text-overflow: ellipsis; }
+.el-tname { cursor: pointer; font-weight: 600; }
+.el-tname:hover { color: var(--el-accent-light); }
+.el-thead .el-tcell { color: var(--el-muted); }
+
+/* ── Модалки ────────────────────────────────────────────────────── */
+.el-modal { position: fixed; inset: 0; background: rgba(0,0,0,.62); display: flex; align-items: center; justify-content: center; z-index: 100000; }
+.el-modal-box { background: var(--el-card); border: 1px solid var(--el-border); border-radius: 12px; padding: 18px 20px; width: min(480px, 92vw); max-height: 88vh; overflow-y: auto; box-shadow: 0 24px 70px rgba(0,0,0,.55); }
+.el-modal-title { font-size: 15px; font-weight: 700; color: var(--el-text); margin-bottom: 14px; }
+.el-field { margin-bottom: 10px; }
+.el-field label { display: block; font-size: 11px; color: var(--el-muted); margin-bottom: 4px; }
+.el-row2 { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
+.el-modal-btns { display: flex; justify-content: flex-end; gap: 8px; margin-top: 14px; }
+
+/* ── Лайтбокс ───────────────────────────────────────────────────── */
+.el-lightbox { position: fixed; inset: 0; background: rgba(0,0,0,.9); display: flex; align-items: center; justify-content: center; z-index: 100001; cursor: zoom-out; }
+.el-lightbox img { max-width: 92vw; max-height: 92vh; border-radius: 10px; box-shadow: 0 30px 90px rgba(0,0,0,.7); }
+.el-lb-hint { position: fixed; bottom: 18px; left: 0; right: 0; text-align: center; color: #999; font-size: 12px; }
+
+.workspace-leaf-content[data-type="markdown"] .el-grid { margin-bottom: 20px; }
