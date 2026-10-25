@@ -7,7 +7,7 @@
    "url": "https://www.dns-shop.ru/product/b58aaa7e00a9d582/videokarta-palit-geforce-rtx-5070-infinity-3-ne75070019k9-gb2050s/",
    "shop": "DNS",
    "price": "89999",
-   "priceDate": "2026-10-17",
+   "priceDate": "2026-10-25",
    "hist": [],
    "altPrice": "",
    "altShop": "",
@@ -20,12 +20,24 @@
    "name": "Ryzen 7 9800X3D OEM",
    "url": "https://www.dns-shop.ru/product/104767799cdfd582/processor-amd-ryzen-7-9800x3d-oem/",
    "shop": "DNS",
-   "price": "42299",
-   "priceDate": "2026-10-17",
+   "price": "41299",
+   "priceDate": "2026-10-25",
    "hist": [
     {
      "p": "39799",
      "d": "2026-10-16"
+    },
+    {
+     "p": "42299",
+     "d": "2026-10-18"
+    },
+    {
+     "p": "39999",
+     "d": "2026-10-19"
+    },
+    {
+     "p": "39799",
+     "d": "2026-10-23"
     }
    ],
    "altPrice": "",
@@ -39,9 +51,18 @@
    "name": "MAG B850 TOMAHAWK MAX WIFI",
    "url": "https://www.dns-shop.ru/product/0e99e58235ead582/materinskaa-plata-msi-mag-b850-tomahawk-max-wifi/",
    "shop": "DNS",
-   "price": "28299",
-   "priceDate": "2026-10-17",
-   "hist": [],
+   "price": "28699",
+   "priceDate": "2026-10-25",
+   "hist": [
+    {
+     "p": "28299",
+     "d": "2026-10-19"
+    },
+    {
+     "p": "27499",
+     "d": "2026-10-23"
+    }
+   ],
    "altPrice": "",
    "altShop": "",
    "status": "in",
@@ -54,7 +75,7 @@
    "url": "https://www.dns-shop.ru/product/bee7ed0131b5ed20/operativnaa-pamat-adata-xpg-lancer-blade-ax5u6000c3016g-dtlabbk-32-gb/",
    "shop": "DNS",
    "price": "62299",
-   "priceDate": "2026-10-17",
+   "priceDate": "2026-10-25",
    "hist": [],
    "altPrice": "",
    "altShop": "",
@@ -68,7 +89,7 @@
    "url": "https://www.dns-shop.ru/product/d843b8c700d5ed20/1024-gb-m2-nvme-nakopitel-kingston-kc3000-skc3000s1024g/",
    "shop": "DNS",
    "price": "21699",
-   "priceDate": "2026-10-17",
+   "priceDate": "2026-10-25",
    "hist": [],
    "altPrice": "",
    "altShop": "",
@@ -81,9 +102,14 @@
    "name": "TITAN GOLD 850",
    "url": "https://www.dns-shop.ru/product/3afea3be698fed20/blok-pitania-montech-titan-gold-850-tis0124-cernyj/",
    "shop": "DNS",
-   "price": "11599",
-   "priceDate": "2026-10-17",
-   "hist": [],
+   "price": "12199",
+   "priceDate": "2026-10-25",
+   "hist": [
+    {
+     "p": "11599",
+     "d": "2026-10-22"
+    }
+   ],
    "altPrice": "",
    "altShop": "",
    "status": "in",
@@ -96,7 +122,7 @@
    "url": "https://www.dns-shop.ru/product/f643aeb111f7c3ee/sistema-ohlazdenia-arctic-liquid-freezer-iii-pro-360-cernaa/",
    "shop": "DNS",
    "price": "10399",
-   "priceDate": "2026-10-17",
+   "priceDate": "2026-10-25",
    "hist": [],
    "altPrice": "",
    "altShop": "",
@@ -110,7 +136,7 @@
    "url": "https://www.dns-shop.ru/product/d1a3848c5f26ed20/korpus-cougar-duoface-pro-rgb-cgr-5ad1b-rgb-cernyj/",
    "shop": "DNS",
    "price": "8999",
-   "priceDate": "2026-10-17",
+   "priceDate": "2026-10-25",
    "hist": [],
    "altPrice": "",
    "altShop": "",

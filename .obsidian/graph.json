@@ -1,12 +1,97 @@
 {
   "collapse-filter": false,
-  "search": "",
+  "search": "-file:\"Шаблон\" -path:\"Templates\" -path:\"Cache\"",
   "showTags": false,
   "showAttachments": false,
   "hideUnresolved": false,
   "showOrphans": true,
   "collapse-color-groups": true,
-  "colorGroups": [],
+  "colorGroups": [
+    {
+      "query": "path:\"Учёба\"",
+      "color": {
+        "a": 1,
+        "rgb": 7049052
+      }
+    },
+    {
+      "query": "path:\"Спорт\"",
+      "color": {
+        "a": 1,
+        "rgb": 10835285
+      }
+    },
+    {
+      "query": "path:\"Электроника\"",
+      "color": {
+        "a": 1,
+        "rgb": 10259279
+      }
+    },
+    {
+      "query": "path:\"3D\"",
+      "color": {
+        "a": 1,
+        "rgb": 5668252
+      }
+    },
+    {
+      "query": "path:\"Рецепты\"",
+      "color": {
+        "a": 1,
+        "rgb": 11039823
+      }
+    },
+    {
+      "query": "path:\"Библиотека\"",
+      "color": {
+        "a": 1,
+        "rgb": 8084636
+      }
+    },
+    {
+      "query": "path:\"Задачи\"",
+      "color": {
+        "a": 1,
+        "rgb": 7829367
+      }
+    },
+    {
+      "query": "path:\"Заметки\"",
+      "color": {
+        "a": 1,
+        "rgb": 5213324
+      }
+    },
+    {
+      "query": "path:\"PC Build\"",
+      "color": {
+        "a": 1,
+        "rgb": 8215130
+      }
+    },
+    {
+      "query": "path:\"Sim Racing\"",
+      "color": {
+        "a": 1,
+        "rgb": 6056847
+      }
+    },
+    {
+      "query": "path:\"Планы\"",
+      "color": {
+        "a": 1,
+        "rgb": 9401429
+      }
+    },
+    {
+      "query": "file:\"Голосовой\"",
+      "color": {
+        "a": 1,
+        "rgb": 6710886
+      }
+    }
+  ],
   "collapse-display": true,
   "showArrow": false,
   "textFadeMultiplier": 0,
@@ -16,7 +101,7 @@
   "centerStrength": 0.518713248970312,
   "repelStrength": 10,
   "linkStrength": 1,
-  "linkDistance": 250,
-  "scale": 0.6245307553782828,
+  "linkDistance": 130,
+  "scale": 0.2444444444444443,
   "close": true
 }

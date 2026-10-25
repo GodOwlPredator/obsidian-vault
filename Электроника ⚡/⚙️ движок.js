@@ -286,7 +286,7 @@ async function elCard(dv, app) {
     /* Связанные записи (проект собирает всё вокруг себя) */
     if (T.links) {
         const name = elPageName(p);
-        const list = dv.pages().where(x => x.file.path !== file.path && String(x.проект || "") === name).array();
+        const list = dv.pages('"' + EL_ROOT + '"').where(x => x.file.path !== file.path && String(x.проект || "") === name).array();
         body.createEl("div", { text: "Связанные записи", cls: "el-section" });
         if (list.length === 0) {
             body.createEl("div", { text: "Пока пусто. В других записях укажи поле «проект: " + name + "» — они соберутся здесь.", cls: "el-progress-lbl" });
@@ -423,7 +423,7 @@ async function elHub(dv, app) {
     inb.addEventListener("click", () => elOpen(app, EL_ROOT + "/📖 Инструкция.md"));
 
     /* ── Данные ── */
-    const allNotes = dv.pages().where(p => p.log && EL_KINDS[String(p.log)] && !p.шаблон);
+    const allNotes = dv.pages('"' + EL_ROOT + '"').where(p => p.log && EL_KINDS[String(p.log)] && !p.шаблон);
 
     /* ── Быстрый переход по разделам ── */
     const jump = root.createEl("div", { cls: "el-filters" });
@@ -640,7 +640,7 @@ async function elStock(dv, app) {
     const tb = top.createEl("button", { text: "🛠 Техника безопасности", cls: "el-btn el-btn-ghost" });
     tb.addEventListener("click", () => elOpen(app, EL_ROOT + "/🛠 Техника безопасности.md"));
 
-    const parts = dv.pages().where(p => String(p.log) === "компонент" && !p.шаблон);
+    const parts = dv.pages('"' + EL_ROOT + '"').where(p => String(p.log) === "компонент" && !p.шаблон);
 
     /* Поиск */
     const toolRow = root.createEl("div", { cls: "el-toolrow" });

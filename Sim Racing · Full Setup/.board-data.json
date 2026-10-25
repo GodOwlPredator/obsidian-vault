@@ -7,7 +7,7 @@
    "url": "https://www.dns-shop.ru/product/c2c7915a12d8d582/baza-rula-moza-r9-v3-direct-drive-wheelbase-cernyj/",
    "shop": "DNS",
    "price": "25399",
-   "priceDate": "2026-10-17",
+   "priceDate": "2026-10-25",
    "hist": [],
    "altPrice": "",
    "altShop": "",
@@ -21,7 +21,7 @@
    "url": "https://www.dns-shop.ru/product/46ce0d6d90d7d21a/rulevoe-koleso-moza-ss-v2p/",
    "shop": "DNS",
    "price": "23599",
-   "priceDate": "2026-10-17",
+   "priceDate": "2026-10-25",
    "hist": [],
    "altPrice": "",
    "altShop": "",
@@ -34,9 +34,18 @@
    "name": "SR-P Pedals — Тормоз + Газ",
    "url": "https://www.dns-shop.ru/product/fa02628d13e3ed20/pedalnyj-blok-moza-sr-p/",
    "shop": "DNS",
-   "price": "13499",
-   "priceDate": "2026-10-17",
-   "hist": [],
+   "price": "12499",
+   "priceDate": "2026-10-25",
+   "hist": [
+    {
+     "p": "13499",
+     "d": "2026-10-19"
+    },
+    {
+     "p": "12999",
+     "d": "2026-10-22"
+    }
+   ],
    "altPrice": "",
    "altShop": "",
    "status": "in",
@@ -62,12 +71,16 @@
    "name": "SGP Sequential Shifter",
    "url": "https://www.dns-shop.ru/product/c0385c7bdaa8ed20/korobka-peredac-moza-sgp/",
    "shop": "DNS",
-   "price": "12999",
-   "priceDate": "2026-10-17",
+   "price": "12499",
+   "priceDate": "2026-10-25",
    "hist": [
     {
      "p": "13499",
      "d": "2026-10-16"
+    },
+    {
+     "p": "12999",
+     "d": "2026-10-22"
     }
    ],
    "altPrice": "",
@@ -82,7 +95,7 @@
    "url": "https://www.dns-shop.ru/product/97bb0d0a0a5ded20/rucnoj-tormoz-moza-hbp-handbrake/",
    "shop": "DNS",
    "price": "8399",
-   "priceDate": "2026-10-17",
+   "priceDate": "2026-10-25",
    "hist": [],
    "altPrice": "",
    "altShop": "",
@@ -96,7 +109,7 @@
    "url": "https://gamestul.ru/shop/tproduct/483426557-902385033141-universalnii-kokpit-gamestul-dual",
    "shop": "gamestul.ru",
    "price": "155700",
-   "priceDate": "2026-10-17",
+   "priceDate": "2026-10-25",
    "altPrice": "",
    "altShop": "",
    "status": "in",
