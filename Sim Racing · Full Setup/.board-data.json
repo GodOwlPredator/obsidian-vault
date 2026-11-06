@@ -7,7 +7,7 @@
    "url": "https://www.dns-shop.ru/product/c2c7915a12d8d582/baza-rula-moza-r9-v3-direct-drive-wheelbase-cernyj/",
    "shop": "DNS",
    "price": "25399",
-   "priceDate": "2026-10-25",
+   "priceDate": "2026-11-06",
    "hist": [],
    "altPrice": "",
    "altShop": "",
@@ -20,9 +20,14 @@
    "name": "CS V2P Steering Wheel",
    "url": "https://www.dns-shop.ru/product/46ce0d6d90d7d21a/rulevoe-koleso-moza-ss-v2p/",
    "shop": "DNS",
-   "price": "23599",
-   "priceDate": "2026-10-25",
-   "hist": [],
+   "price": "23699",
+   "priceDate": "2026-11-06",
+   "hist": [
+    {
+     "p": "23599",
+     "d": "2026-10-26"
+    }
+   ],
    "altPrice": "",
    "altShop": "",
    "status": "in",
@@ -35,7 +40,7 @@
    "url": "https://www.dns-shop.ru/product/fa02628d13e3ed20/pedalnyj-blok-moza-sr-p/",
    "shop": "DNS",
    "price": "12499",
-   "priceDate": "2026-10-25",
+   "priceDate": "2026-11-06",
    "hist": [
     {
      "p": "13499",
@@ -71,8 +76,8 @@
    "name": "SGP Sequential Shifter",
    "url": "https://www.dns-shop.ru/product/c0385c7bdaa8ed20/korobka-peredac-moza-sgp/",
    "shop": "DNS",
-   "price": "12499",
-   "priceDate": "2026-10-25",
+   "price": "12199",
+   "priceDate": "2026-11-06",
    "hist": [
     {
      "p": "13499",
@@ -81,6 +86,14 @@
     {
      "p": "12999",
      "d": "2026-10-22"
+    },
+    {
+     "p": "12499",
+     "d": "2026-10-26"
+    },
+    {
+     "p": "11999",
+     "d": "2026-11-04"
     }
    ],
    "altPrice": "",
@@ -94,9 +107,14 @@
    "name": "HBP Handbrake",
    "url": "https://www.dns-shop.ru/product/97bb0d0a0a5ded20/rucnoj-tormoz-moza-hbp-handbrake/",
    "shop": "DNS",
-   "price": "8399",
-   "priceDate": "2026-10-25",
-   "hist": [],
+   "price": "7999",
+   "priceDate": "2026-11-06",
+   "hist": [
+    {
+     "p": "8399",
+     "d": "2026-10-26"
+    }
+   ],
    "altPrice": "",
    "altShop": "",
    "status": "in",
@@ -109,7 +127,7 @@
    "url": "https://gamestul.ru/shop/tproduct/483426557-902385033141-universalnii-kokpit-gamestul-dual",
    "shop": "gamestul.ru",
    "price": "155700",
-   "priceDate": "2026-10-25",
+   "priceDate": "2026-11-06",
    "altPrice": "",
    "altShop": "",
    "status": "in",

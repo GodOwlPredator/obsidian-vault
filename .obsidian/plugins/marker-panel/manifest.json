@@ -1,0 +1,9 @@
+{
+  "id": "marker-panel",
+  "name": "Marker Panel",
+  "version": "1.0.0",
+  "minAppVersion": "1.4.0",
+  "description": "Мелкая панель: выделители (12 цветов + свой RGB), форма мазка, плотность, бинд панели форматирования.",
+  "author": "Alex (локальный, без сети)",
+  "isDesktopOnly": true
+}

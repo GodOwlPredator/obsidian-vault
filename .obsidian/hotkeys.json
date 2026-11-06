@@ -14,5 +14,20 @@
       ],
       "key": "]"
     }
+  ],
+  "editing-toolbar:hide-show-menu": [
+    {
+      "modifiers": [
+        "Alt",
+        "Shift"
+      ],
+      "key": "T"
+    }
+  ],
+  "marker-panel:open": [
+    {
+      "modifiers": [],
+      "key": "+"
+    }
   ]
 }

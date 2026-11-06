@@ -3,5 +3,8 @@
   "templater-obsidian",
   "dataview",
   "obsidian-style-settings",
-  "omnisearch"
+  "omnisearch",
+  "editing-toolbar",
+  "toolbar-toggle",
+  "marker-panel"
 ]

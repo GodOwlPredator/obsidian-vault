@@ -1,0 +1,9 @@
+{
+  "id": "toolbar-toggle",
+  "name": "Toolbar Toggle",
+  "version": "1.0.0",
+  "minAppVersion": "1.4.0",
+  "description": "Кнопка в левой панели: скрыть или показать панель форматирования.",
+  "author": "Alex (локальный, без сети)",
+  "isDesktopOnly": true
+}

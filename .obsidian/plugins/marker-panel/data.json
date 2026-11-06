@@ -1,0 +1,59 @@
+{
+  "colors": {
+    "hl-yellow": "#FFDB28",
+    "hl-green": "#84E574",
+    "hl-pink": "#FF8FBB",
+    "hl-blue": "#7AC2FF",
+    "hl-orange": "#FFA040",
+    "hl-purple": "#C49EFF",
+    "hl-cyan": "#7EE7FF",
+    "hl-red": "#FF6E6E",
+    "hl-lime": "#C9F04B",
+    "hl-brown": "#D98C5F",
+    "hl-gray": "#C4C4C4",
+    "hl-teal": "#5FD6A8"
+  },
+  "shape": "plain",
+  "density": 35,
+  "padY": 13,
+  "padX": 28,
+  "custom": "#FFDB28",
+  "hk": [
+    {
+      "modifiers": [
+        "Alt",
+        "Shift"
+      ],
+      "key": "T"
+    }
+  ],
+  "hkPanel": [
+    {
+      "modifiers": [],
+      "key": "+"
+    }
+  ],
+  "btnBg": [
+    "#FFB78B",
+    "#CDF469",
+    "#A0CCF6",
+    "#F0A7D8",
+    "#ADEFEF"
+  ],
+  "btnFg": [
+    "#D83931",
+    "#DE7802",
+    "#245BDB",
+    "#6425D0",
+    "#646A73"
+  ],
+  "pos": {
+    "top": 0,
+    "right": 274
+  },
+  "collapsed": false,
+  "order": {
+    "main": [],
+    "popover": []
+  }
+}

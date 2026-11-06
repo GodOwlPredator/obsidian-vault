@@ -1,30 +1,29 @@
 /* 🎨 Цветные выделители — маркер + рваная бумага.
-   Цвет:      класс mark.hl-* / span.hl-* задаёт --hl-c = r,g,b
-   Плотность: body [--hl-a] (0.05..1) — меняет все выделения сразу
-   Форма:     body.hl-razn / body.hl-round / body.hl-plain — рваная / закруглённая / ровная
+   Цвет:      класс span.hl-* / mark.hl-* (кнопки «Маркер» в панели форматирования).
+   Настройка: панель «🎨 Маркер» — иконка маркера в левой ленте (цвета, форма, плотность).
+   Свой цвет: <span class="hl-custom" style="--hl-c: R,G,B">…</span>. */
 
-   Покрытие букв: базовая заливка прямо на элементе с вертикальным
-   padding (0.13em сверху/снизу) — глифы с выносными элементами (р, у, б)
-   полностью попадают в мазок, как у настоящего маркера. */
-
-/* ─ цвета пресетов (r,g,b) ─────────────────────────────── */
-mark.hl-yellow, span.hl-yellow { --hl-c: 255, 219, 40; }
-mark.hl-green,  span.hl-green  { --hl-c: 132, 229, 116; }
-mark.hl-pink,   span.hl-pink   { --hl-c: 255, 143, 187; }
-mark.hl-blue,   span.hl-blue   { --hl-c: 122, 194, 255; }
-mark.hl-orange, span.hl-orange { --hl-c: 255, 160, 64; }
-mark.hl-purple, span.hl-purple { --hl-c: 196, 158, 255; }
-mark.hl-cyan,   span.hl-cyan   { --hl-c: 126, 231, 255; }
-mark.hl-red,    span.hl-red    { --hl-c: 255, 110, 110; }
-/* кастомный цвет подставляется динамически:
-   mark.hl-custom { --hl-c: R,G,B; }  — из панели */
+/* ─ цвета пресетов (их ставит панель «Маркер», fallback — заводские) ── */
+mark.hl-yellow, span.hl-yellow { --hl-c: var(--hl-yellow, 255, 219, 40); }
+mark.hl-green,  span.hl-green  { --hl-c: var(--hl-green,  132, 229, 116); }
+mark.hl-pink,   span.hl-pink   { --hl-c: var(--hl-pink,   255, 143, 187); }
+mark.hl-blue,   span.hl-blue   { --hl-c: var(--hl-blue,   122, 194, 255); }
+mark.hl-orange, span.hl-orange { --hl-c: var(--hl-orange, 255, 160, 64); }
+mark.hl-purple, span.hl-purple { --hl-c: var(--hl-purple, 196, 158, 255); }
+mark.hl-cyan,   span.hl-cyan   { --hl-c: var(--hl-cyan,   126, 231, 255); }
+mark.hl-red,    span.hl-red    { --hl-c: var(--hl-red,    255, 110, 110); }
+mark.hl-lime,   span.hl-lime   { --hl-c: var(--hl-lime,   201, 240, 75); }
+mark.hl-brown,  span.hl-brown  { --hl-c: var(--hl-brown,  217, 140, 95); }
+mark.hl-gray,   span.hl-gray   { --hl-c: var(--hl-gray,   196, 196, 196); }
+mark.hl-teal,   span.hl-teal   { --hl-c: var(--hl-teal,   95, 214, 168); }
+mark.hl-custom, span.hl-custom { --hl-c: 255, 219, 40; }
 
 /* ─ базовая заливка: маркер, покрывающий ВСЕ буквы ─────── */
 mark[class*="hl-"],
 span[class*="hl-"] {
-  background: rgba(var(--hl-c), var(--hl-a, 0.68));
+  background: rgba(var(--hl-c, 255, 219, 40), var(--hl-a, 0.35));
   color: inherit;
-  padding: 0.13em 0.28em;              /* вертикальный запас для выносных элементов */
+  padding: calc(var(--hl-pad-y, 0.13) * 1em) calc(var(--hl-pad-x, 0.28) * 1em);
   border-radius: 3px;
   text-shadow: 0 1px 1px rgba(0, 0, 0, 0.3);
   box-decoration-break: clone;
@@ -36,17 +35,16 @@ body.hl-plain span[class*="hl-"] {
   border-radius: 2px;
 }
 
-/* ─ форма: закруглённая — симметричный скруг, без смещения ─ */
+/* ─ форма: закруглённая — симметричный скруг ──────────── */
 body.hl-round mark[class*="hl-"],
 body.hl-round span[class*="hl-"] {
   border-radius: 0.6em;
   padding: 0.15em 0.45em;
 }
 
-/* ─ форма: рваная — смесь маркера и рваной бумаги ─────────
-   Заливка уходит на тень-подложку с рваными зубчатыми краями
-   (top/bottom отрицательные — мазок чуть выше и ниже текста,
-   поэтому буквы не обрезаются). */
+/* ─ форма: рваная (по умолчанию) — маркер по рваной бумаге.
+   Заливка уходит на тень-подложку с зубчатыми краями
+   (отрицательные top/bottom — мазок чуть выше и ниже текста). */
 body.hl-razn mark[class*="hl-"],
 body.hl-razn span[class*="hl-"] {
   position: relative;
@@ -61,7 +59,7 @@ body.hl-razn span[class*="hl-"]::before {
   z-index: -1;
   background:
     linear-gradient(180deg, rgba(255, 255, 255, 0.10) 0%, rgba(255, 255, 255, 0) 40%),
-    rgba(var(--hl-c), var(--hl-a, 0.7));
+    rgba(var(--hl-c, 255, 219, 40), var(--hl-a, 0.35));
   clip-path: polygon(
     /* верхний рваный край */
     0 8%, 2.5% 3%, 6% 7%, 9% 2%, 13% 8%, 17% 2%, 21% 7%, 25% 3%, 30% 9%, 34% 2%,
