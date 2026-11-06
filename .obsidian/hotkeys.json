@@ -17,11 +17,8 @@
   ],
   "editing-toolbar:hide-show-menu": [
     {
-      "modifiers": [
-        "Alt",
-        "Shift"
-      ],
-      "key": "T"
+      "modifiers": [],
+      "key": "6"
     }
   ],
   "marker-panel:open": [
