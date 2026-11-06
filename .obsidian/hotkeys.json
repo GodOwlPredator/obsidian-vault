@@ -18,7 +18,7 @@
   "editing-toolbar:hide-show-menu": [
     {
       "modifiers": [],
-      "key": "6"
+      "key": "ARROWRIGHT"
     }
   ],
   "marker-panel:open": [
